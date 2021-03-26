@@ -12,9 +12,13 @@ namespace ProblemSolving
 
             // ProblemMedium.FindTheWord("Diver", "I like to Diver Cards.");
 
-            VariablesThings variables = new VariablesThings();
+            /*VariablesThings variables = new VariablesThings();
             variables.AddListValuesSort(); // This adds all the values to all three array list. didn't want to messy up program class.
-            ProblemMedium.SortLargestArray(variables.NumberTest1,variables.NumberTest2,variables.NumberTest3);
+            ProblemMedium.SortLargestArray(variables.NumberTest1,variables.NumberTest2,variables.NumberTest3);*/
+
+            ProblemMedium.DiffercesOfTwoSquare(5);
+            ProblemMedium.DiffercesOfTwoSquare(6);
+            ProblemMedium.DiffercesOfTwoSquare(7);
         }
     }
 }

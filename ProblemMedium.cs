@@ -91,5 +91,41 @@ namespace ProblemSolving
 
             }
         }
+
+        /// <summary>
+        /// The function calulate the area of both Inner and outter square, and print the differences.
+        /// They are two squares: a smaller and a bigger one. The smaller square is in a cirle circumcircles and
+        /// bigger square is on the incircle(outside).
+        /// </summary>
+        /// <param name="radius"></param>
+        public static void DiffercesOfTwoSquare(double radius)
+        {
+            /* Problem: A cirle and two squares
+             * _______________________________________________________________________________________
+             * Imagine a circle and two squares: a smaller and a bigger one. 
+             * For the smaller one, the circle is a circumcircle and for the bigger one, an incircle.
+             * _______________________________________________________________________________________
+             * 
+             * So we are givin the radius of the circle. Which we use to find the area of the inner sqaure
+             * and outter square. Then subtrace both areas to find the differces. 
+             *  Formula for differences --------> Outter square - Innder square = Differences.
+             */
+            
+            double diameter = radius * 2;
+            double side = (diameter/2) * Math.Sqrt(2);
+
+          /* The formula of a square is [side * side = Area]*/
+            double area1 = side * side; 
+            double area2 = diameter * diameter;
+
+            /* The formula for differences. */
+            double difference = Math.Ceiling((area2 - area1));
+
+            ConsoleExtras.ColoredText($"A circle and two squares. Radius: {radius}",ConsoleColor.Yellow);
+            Console.WriteLine($"The differences of the Inner and outter." +
+                $"\nArea: {difference}\n");
+
+        }
+
     }
 }
