@@ -27,5 +27,19 @@ namespace ProblemSolving
             }
             Console.Write("]\n\n");
         }
+
+        /// <summary>
+        /// This function searchs for a world in a string(text), if it finds it it will tell you the index, if not then retun a string that it can find it.
+        /// </summary>
+        /// <param name="word"></param>
+        /// <param name="text"></param>
+        public  static void FindTheWord(string word, string text)
+        {
+            ConsoleExtras.ColoredText("Fin the word", ConsoleColor.Blue);
+            string search = text.Contains(word) || text.Contains(word) ? $"The word [{word}] is in index {text.IndexOf(word)}" 
+                : $"The world {word} is not found";
+            Console.WriteLine(search);
+            ConsoleExtras.ColoredText(text+"\n",ConsoleColor.DarkYellow);
+        }
     }
 }
