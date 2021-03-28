@@ -127,5 +127,18 @@ namespace ProblemSolving
 
         }
 
+        /// <summary>
+        /// calculates how many dots exist in a pentagonal shape around the center dot on the Nth iteration.
+        /// Formula: (5(n^2) - 5n + 2) / 2
+        /// </summary>
+        /// <param name="number"></param>
+        public static void CenteredPentagonal(int number)
+        { 
+            double soultion;
+            soultion = ((5 * (Math.Pow(number, 2)) - (5 * number) + 2)) / 2;
+
+            ConsoleExtras.ColoredText("Centerd Pentagonal", ConsoleColor.Green);
+            Console.WriteLine(soultion+"\n");
+        }
     }
 }
