@@ -30,7 +30,7 @@ namespace ProblemSolving
             //  ConsoleExtras.ColoredText("Fibonacci",ConsoleColor.Cyan);
             //  Console.WriteLine( dynamicProgramming.FibonacciSequence(12));
 
-            Console.WriteLine(dynamicProgramming.FibonacciSequenceMemoizion(10));
+            Console.WriteLine(dynamicProgramming.FibonacciSequenceMemoizion(200));
         }
     }
 }

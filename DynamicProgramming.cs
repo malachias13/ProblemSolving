@@ -20,9 +20,9 @@ namespace ProblemSolving
             }
             
         }
-        public int FibonacciSequenceMemoizion(int number)
+        public ulong FibonacciSequenceMemoizion(ulong number)
         {
-            int[] fib = new int[number + 1];
+            ulong[] fib = new ulong[number + 1];
 
             fib[0] = 0;
             fib[1] = 1;
