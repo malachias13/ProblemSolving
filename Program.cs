@@ -27,8 +27,10 @@ namespace ProblemSolving
             ProblemMedium.CenteredPentagonal(3);
             ProblemMedium.CenteredPentagonal(8);*/
 
-            ConsoleExtras.ColoredText("Fibonacci",ConsoleColor.Cyan);
-           Console.WriteLine( dynamicProgramming.FibonacciSequence(10));
+            //  ConsoleExtras.ColoredText("Fibonacci",ConsoleColor.Cyan);
+            //  Console.WriteLine( dynamicProgramming.FibonacciSequence(12));
+
+            Console.WriteLine(dynamicProgramming.FibonacciSequenceMemoizion(10));
         }
     }
 }
