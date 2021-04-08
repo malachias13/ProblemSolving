@@ -6,6 +6,8 @@ namespace ProblemSolving
     {
         static void Main(string[] args)
         {
+            DynamicProgramming dynamicProgramming = new DynamicProgramming();
+
             /*  ProblemMedium.ArrayOfMultiples(7, 5);
               ProblemMedium.ArrayOfMultiples(12, 10);
               ProblemMedium.ArrayOfMultiples(17, 6);*/
@@ -20,10 +22,13 @@ namespace ProblemSolving
              ProblemMedium.DiffercesOfTwoSquare(6);
              ProblemMedium.DiffercesOfTwoSquare(7);*/
 
-            ProblemMedium.CenteredPentagonal(1);
+            /*ProblemMedium.CenteredPentagonal(1);
             ProblemMedium.CenteredPentagonal(2);
             ProblemMedium.CenteredPentagonal(3);
-            ProblemMedium.CenteredPentagonal(8);
+            ProblemMedium.CenteredPentagonal(8);*/
+
+            ConsoleExtras.ColoredText("Fibonacci",ConsoleColor.Cyan);
+           Console.WriteLine( dynamicProgramming.FibonacciSequence(10));
         }
     }
 }
