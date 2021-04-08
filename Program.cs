@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProblemSolving
 {
@@ -30,7 +31,11 @@ namespace ProblemSolving
             //  ConsoleExtras.ColoredText("Fibonacci",ConsoleColor.Cyan);
             //  Console.WriteLine( dynamicProgramming.FibonacciSequence(12));
 
-            Console.WriteLine(dynamicProgramming.FibonacciSequenceMemoizion(200));
+            //  Console.WriteLine(dynamicProgramming.FibonacciSequenceMemoizion(200));
+
+            //Console.WriteLine(dynamicProgramming.GridTravler(18, 18));
+            Dictionary<string, ulong> gridDictionary = new Dictionary<string, ulong>();
+            Console.WriteLine(dynamicProgramming.GridTravlerMemoize(18, 18,gridDictionary));
         }
     }
 }
