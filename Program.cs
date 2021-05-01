@@ -34,8 +34,13 @@ namespace ProblemSolving
             //  Console.WriteLine(dynamicProgramming.FibonacciSequenceMemoizion(200));
 
             //Console.WriteLine(dynamicProgramming.GridTravler(18, 18));
-            Dictionary<string, ulong> gridDictionary = new Dictionary<string, ulong>();
-            Console.WriteLine(dynamicProgramming.GridTravlerMemoize(18, 18,gridDictionary));
+            //  Dictionary<string, ulong> gridDictionary = new Dictionary<string, ulong>();
+            //  Console.WriteLine(dynamicProgramming.GridTravlerMemoize(100, 100,gridDictionary));
+
+
+            ApplyedMath applyedMath = new ApplyedMath();
+
+            applyedMath.DivideComplexNumbers("6+3i/7-5i");
         }
     }
 }

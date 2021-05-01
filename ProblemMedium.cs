@@ -140,5 +140,9 @@ namespace ProblemSolving
             ConsoleExtras.ColoredText("Centerd Pentagonal", ConsoleColor.Green);
             Console.WriteLine(soultion+"\n");
         }
+
+
+
+
     }
 }
