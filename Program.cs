@@ -40,7 +40,12 @@ namespace ProblemSolving
 
             ApplyedMath applyedMath = new ApplyedMath();
 
-            applyedMath.DivideComplexNumbers("6+3i/7-5i");
+            //applyedMath.DivideComplexNumbers("6+3i/7-5i");
+            //applyedMath.DivideComplexNumbers("-32+8i/5+3i");
+            //applyedMath.DivideComplexNumbers("25+19i/5-3i");
+            //applyedMath.DivideComplexNumbers("-23+11i/5+1i");
+            //applyedMath.DivideComplexNumbers("2-8i/3+5i");
+            applyedMath.DivideComplexNumbers("2-16i  / - 3 - 1i");
         }
     }
 }

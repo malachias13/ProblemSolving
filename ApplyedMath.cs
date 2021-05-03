@@ -38,30 +38,26 @@ namespace ProblemSolving
                         if(i != 0)
                             index++;
                         parseEquation[index]  = problem[i].ToString();
-                       // index++;
                         break;
                     case '-':
                         if(i != 0)
                             index++;
                         parseEquation[index] = problem[i].ToString();
-                       // index++;
                         break;
                     case '/':
                         index++;
                         parseEquation[index] = problem[i].ToString();
-                        index++;
                         break;
                     case 'i':
                         index++;
                         parseEquation[index] = problem[i].ToString();
-                       //  index++;
+                        break;
+                    case ' ':
                         break;
                     default:
-                      //  index++;
                         parseEquation[index] += int.Parse(problem[i].ToString()).ToString();
                         break;
                 }
-              
 
             }
             for(int i = 0; i < parseEquation.Length;i++)
@@ -88,7 +84,8 @@ namespace ProblemSolving
                     case "/":
                         break;
                     case "i":
-
+                        break;
+                    case " ":
                         break;
                     default:
                         int.TryParse(parseEquation[i],out num);
