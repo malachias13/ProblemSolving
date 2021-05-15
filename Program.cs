@@ -38,14 +38,26 @@ namespace ProblemSolving
             //  Console.WriteLine(dynamicProgramming.GridTravlerMemoize(100, 100,gridDictionary));
 
 
-            ApplyedMath applyedMath = new ApplyedMath();
+            //ApplyedMath applyedMath = new ApplyedMath();
 
             //applyedMath.DivideComplexNumbers("6+3i/7-5i");
             //applyedMath.DivideComplexNumbers("-32+8i/5+3i");
             //applyedMath.DivideComplexNumbers("25+19i/5-3i");
             //applyedMath.DivideComplexNumbers("-23+11i/5+1i");
             //applyedMath.DivideComplexNumbers("2-8i/3+5i");
-            applyedMath.DivideComplexNumbers("2-16i  / - 3 - 1i");
+            //applyedMath.DivideComplexNumbers("2-16i / - 3 - 1i");
+
+            // Remove Duplicates from Sorted Array
+
+            int[] DuplicatedArray = { 4, 4, 4, 5, 5, 8, 8, 10,10, 22 };
+
+            int len = ProblemMedium.RemoveDuplicates(DuplicatedArray);
+            for (int i = 0; i < len; i++)
+            {
+                Console.Write(DuplicatedArray[i] +", ");
+            }
+
+
         }
     }
 }

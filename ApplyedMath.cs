@@ -60,11 +60,11 @@ namespace ProblemSolving
                 }
 
             }
-            for(int i = 0; i < parseEquation.Length;i++)
+           /* for(int i = 0; i < parseEquation.Length;i++)
             {
                 Console.WriteLine(parseEquation[i]);
             }
-
+           */
             int loop = 0;
             for (int i = 0; i < parseEquation.Length;i++)
             {
