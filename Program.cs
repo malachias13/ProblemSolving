@@ -60,7 +60,7 @@ namespace ProblemSolving
 
 
              int[] numList = { 100, 80, 20, 10, 7, 6 };
-            int[] numList = { 20, 20, 40, 44, 48, 50, 54 };
+           // int[] numList = { 20, 20, 40, 44, 48, 50, 54 };
             Console.WriteLine(DynamicProgramming.BinarySearch(numList,54));
 
         }
