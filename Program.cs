@@ -49,14 +49,19 @@ namespace ProblemSolving
 
             // Remove Duplicates from Sorted Array
 
-            int[] DuplicatedArray = { 4, 4, 4, 5, 5, 8, 8, 10,10, 22 };
+            /*  int[] DuplicatedArray = { 4, 4, 4, 5, 5, 8, 8, 10,10, 22 };
 
-            int len = ProblemMedium.RemoveDuplicates(DuplicatedArray);
-            for (int i = 0; i < len; i++)
-            {
-                Console.Write(DuplicatedArray[i] +", ");
-            }
+              int len = ProblemMedium.RemoveDuplicates(DuplicatedArray);
+              for (int i = 0; i < len; i++)
+              {
+                  Console.Write(DuplicatedArray[i] +", ");
+              }
+            */
 
+
+             int[] numList = { 100, 80, 20, 10, 7, 6 };
+            int[] numList = { 20, 20, 40, 44, 48, 50, 54 };
+            Console.WriteLine(DynamicProgramming.BinarySearch(numList,54));
 
         }
     }

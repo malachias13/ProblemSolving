@@ -9,7 +9,7 @@ namespace ProblemSolving
 {
     public class DynamicProgramming
     {
-        public int FibonacciSequence(int number)
+        public static int FibonacciSequence(int number)
         {
             if(number == 0) {  return 0; }
             if(number == 1) {  return 1; }
@@ -20,7 +20,7 @@ namespace ProblemSolving
             }
             
         }
-        public ulong FibonacciSequenceMemoizion(ulong number)
+        public static ulong FibonacciSequenceMemoizion(ulong number)
         {
             ulong[] fib = new ulong[number + 1];
 
@@ -125,7 +125,7 @@ namespace ProblemSolving
 
         /* Find the total amout of ways to move from the top-left corner to the bottom-right. 
          * Only moving down or right. */
-        public int GridTravler(int rows,int columns)
+        public static int GridTravler(int rows,int columns)
         {
             if(rows == 1 && columns == 1) { return 1; }
             if(rows == 0 || columns == 0) { return 0; }
@@ -133,7 +133,7 @@ namespace ProblemSolving
             return GridTravler(rows - 1, columns) + GridTravler(rows, columns - 1);
             
         }
-        public ulong GridTravlerMemoize(ulong rows,ulong columns,Dictionary<string,ulong> gridDictionary)
+        public static ulong GridTravlerMemoize(ulong rows,ulong columns,Dictionary<string,ulong> gridDictionary)
         {
             // ulong[,] grid = new ulong[rows + 1, columns + 1];
             string key = $"{rows},{columns}";
@@ -147,5 +147,59 @@ namespace ProblemSolving
             gridDictionary[key] = GridTravlerMemoize(rows - 1, columns,gridDictionary) + GridTravlerMemoize(rows, columns - 1,gridDictionary);
             return gridDictionary[key];
         }
+
+        /// <summary>
+        /// Binary Search.
+        /// It search for an index in a ordered list.
+        /// </summary>
+        /// <param name="Array"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public static int BinarySearch(int[]Array, int target)
+        {
+            bool leaseToGreater = false;
+            // Checking to see is Array is order from lease to greatest.
+            for(int i = 0; i < Array.Length; i++)
+            {
+                if (i + 1 > Array.Length - 1) { break; }
+                if (Array[i] == Array[i + 1]) { continue; }
+                if(Array[i] < Array[i + 1]) 
+                { 
+                    leaseToGreater = true;
+                    break;
+                }
+                else 
+                {
+                    leaseToGreater = false;
+                    break;
+                }
+            }
+
+            int low = 0, high = Array.Length-1, mid = 0;
+
+            switch (leaseToGreater)
+            {
+                case true:
+                    while(low <= high)
+                    {
+                        mid = (low + high) / 2;
+                        if (Array[mid] == target) { return mid; }
+                        else if(Array[mid] > target) { high = mid - 1; }
+                        else if(Array[mid] < target) { low = mid + 1; }
+                    }
+                    break;
+                case false:
+                    while(low <= high)
+                    {
+                        mid = (low + high) / 2;
+                        if(Array[mid] == target) { return mid; }
+                        else if(Array[mid] < target) { high = mid - 1; }
+                        else if(Array[mid] > target) { low = mid + 1; }
+                    }
+                    break;
+            }
+            return -1;
+        }
+
     }
 }
