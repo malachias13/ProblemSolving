@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace ProblemSolving
 {
@@ -175,24 +175,107 @@ namespace ProblemSolving
                 }
             }
 
+            ConsoleExtras.DotLoadingAnimation("Checking Array a stortment", 200, 5); // DEBUGING
             int low = 0, high = Array.Length-1, mid = 0;
 
+            int steps = 1; // DEBUGING
             switch (leaseToGreater)
             {
                 case true:
+                    ConsoleExtras.ColoredText("Array is storted from least to greatest."
+                        , ConsoleColor.Green); // DEBUGING
                     while(low <= high)
                     {
                         mid = (low + high) / 2;
+                        #region Debuging
+                        ConsoleExtras.ColoredWrite($"{steps}. ", ConsoleColor.Cyan); // DEBUGING
+                        for (int i = low; i < high + 1; i++)
+                        {
+                            if(i == high && i == low && Array[i] == target)
+                            {
+                                ConsoleExtras.ColoredWrite(Array[i].ToString(), ConsoleColor.Green);
+                                break;
+                            }
+                            else if(i == high && i == low && Array[i] != target)
+                            {
+                                ConsoleExtras.ColoredWrite($"Array dose not contain {target}.", ConsoleColor.Red);
+                                break;
+                            }
+
+                            if (i == high)
+                            {
+                                ConsoleExtras.ColoredWrite($"{Array[i]}", ConsoleColor.Blue);
+                                break;
+                            }
+                            if (i == mid)
+                            {
+                                ConsoleExtras.ColoredWrite($"{Array[i]},", ConsoleColor.DarkRed);
+                            }
+                            else if (i == low)
+                            {
+                                ConsoleExtras.ColoredWrite($"{Array[i]}", ConsoleColor.Blue);
+                                Console.Write(",");
+                            }
+                            else
+                            {
+                                Console.Write($"{Array[i]},");
+                            }
+                        }
+                        Console.Write("\n");
+                        steps++; // DEBUGING
+                        Thread.Sleep(1000); // DEBUGING
+                        #endregion
                         if (Array[mid] == target) { return mid; }
                         else if(Array[mid] > target) { high = mid - 1; }
                         else if(Array[mid] < target) { low = mid + 1; }
                     }
                     break;
                 case false:
-                    while(low <= high)
+                    ConsoleExtras.ColoredText("Array is storted from greatest to least."
+                        , ConsoleColor.Cyan); // DEBUGING
+
+                    while (low <= high)
                     {
                         mid = (low + high) / 2;
-                        if(Array[mid] == target) { return mid; }
+                        #region Debuging
+                        ConsoleExtras.ColoredWrite($"{steps}. ", ConsoleColor.Cyan); // DEBUGING
+                        for (int i = low; i < high+1; i++)
+                        {
+                            if(i == high && i == low && Array[i] == target)
+                            {
+                                ConsoleExtras.ColoredWrite(Array[i].ToString(), ConsoleColor.Green);
+                                break;
+                            }
+                            else if(i == high && i == low && Array[i] != target)
+                            {
+                                ConsoleExtras.ColoredWrite($"Array dose not contain {target}.", ConsoleColor.Red);
+                                break;
+                            }
+
+                            if (i == high)
+                            {
+                                ConsoleExtras.ColoredWrite($"{Array[i]}",ConsoleColor.Blue);
+                                break;
+                            }
+                            if (i == mid)
+                            {
+                                ConsoleExtras.ColoredWrite($"{Array[i]},", ConsoleColor.DarkRed);
+                            }
+                            else if(i == low)
+                            {
+                                ConsoleExtras.ColoredWrite($"{Array[i]}", ConsoleColor.Blue);
+                                Console.Write(",");
+                            }
+                            else
+                            {
+                                Console.Write($"{Array[i]},");
+                            }
+                        }
+                        Console.Write("\n");
+                        Thread.Sleep(1000); // DEBUGING
+                        steps++; // DEBUGING
+                        #endregion
+                        if (Array[mid] == target) { return mid; }
                         else if(Array[mid] < target) { high = mid - 1; }
                         else if(Array[mid] > target) { low = mid + 1; }
                     }

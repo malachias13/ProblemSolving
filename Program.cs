@@ -59,9 +59,27 @@ namespace ProblemSolving
             */
 
 
-             int[] numList = { 100, 80, 20, 10, 7, 6 };
-           // int[] numList = { 20, 20, 40, 44, 48, 50, 54 };
-            Console.WriteLine(DynamicProgramming.BinarySearch(numList,54));
+             int[] numList = { 100, 99, 89, 72, 54, 52,34,30,16,15,14,10,5,4,2 };
+             //int[] numList = { 20, 20, 40, 44, 48, 50, 54 };
+            int target = 42;
+            Console.WriteLine("Array of numbers");
+
+            Console.Write("Where is ");
+            ConsoleExtras.ColoredWrite(target.ToString(), ConsoleColor.Green);
+            Console.Write(" located in the array.\n") ;
+            // Print array.
+            for(int i = 0; i < numList.Length;i++)
+            {
+                if(i == numList.Length-1)
+                {
+                    ConsoleExtras.ColoredWrite($"{numList[i]}\n", ConsoleColor.DarkYellow);
+                    break;
+                }
+                ConsoleExtras.ColoredWrite($"{numList[i]}, ",ConsoleColor.DarkYellow);
+            }
+
+            Console.WriteLine($"Index: {DynamicProgramming.BinarySearch(numList,target)}");
+
 
         }
     }
